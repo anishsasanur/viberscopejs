@@ -2,6 +2,8 @@ import { getIdFromUrl, getComments, getVideoInfo } from '../services/youtube';
 import { parseRequest, success, error } from '../helpers/general';
 import { post } from '../services/axiosConfig';
 
+app.listen(process.env.PORT || 8080)
+
 module.exports.analyze = async evt => {
     //
     const req = parseRequest(evt);
